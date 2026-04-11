@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+:root {
+    --base-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #ffc06e;
+    --secondary-color: #8D8DFF;
+    --color-1 : #F9F6F3;
+    --color-2 : #F3F7F9;
+    --color-3 : #F6F3F9;
+}
+
+* {
+    margin: 0; /* This is used to remove the default margin of the elements */ 
+    padding: 0; /* This is used to remove the default margin and padding of the elements */ 
+    box-sizing: border-box; /* This is used to make the padding and border included in the width and height of the element */ 
+}
+
+html {
+    font-family: 'Google Sans', serif, Poppins;   
+    color: var(--text-color);
+}
+
+body {
+    padding: 1em;
+    background-color: var(--base-color);
+}
+
+h1,h2,h3 {
+    font-family: 'Merriweather', serif, Poppins;
+    background-color: var(--color-1);
+    padding: 0.5em 0;
+}
+
+nav {
+    margin-top: 1em auto 3em auto;
+    width: min(1000px, 100%);
+}
+
+nav ul {
+    display: flex; /* This is used to display the list items in a row */
+    align-items: center;
+    list-style-type: none; /* This is used to remove the default list style */
+    gap: 2em;
+    font-weight: bold;
+}
+
+nav li:nth-child(1) {
+    margin-right: auto;
+    font-family: 'Google Sans', serif, Poppins;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: var(--text-color);
+}
+
+header, section {
+    margin: 2em auto;
+    padding: min(2em, 15%);
+    width: min(75em, 100%);
+    border-radius: 1em;
+    background-color: var(--color-1);
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    flex-wrap: wrap;
+}
+
+header img {
+    max-width: 100%;
+    border-radius: 1em;
+    object-position: bottom;
+}
+
+header img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+    flex: 0 1 40em;
+}
+
+.text-container p {
+    margin: .75em 0 1em;
+    font-size: 1.1em;
+}
+
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.75em 1.25em;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 0.5em;
+    font-family: 'Google Sans', serif, Poppins;
+    font-weight: 600;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+}
+
+section {
+    padding: 3em min(2em, 15%);
+    background-color: var(--color-2);
+    text-align: left;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 1.7em;
+}
+
+section p {
+    margin-top: 1em;
+    font-size: 1.1em;
+}
