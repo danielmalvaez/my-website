@@ -29,26 +29,35 @@ body {
 
 h1,h2,h3 {
     font-family: 'Merriweather', serif, Poppins;
-    background-color: var(--color-1);
+    /*background-color: var(--color-1);*/
     padding: 0.5em 0;
 }
 
 nav {
-    margin-top: 1em auto 3em auto;
+    margin: 1em auto 0 auto;
     width: min(1000px, 100%);
 }
 
-nav ul {
-    display: flex; /* This is used to display the list items in a row */
+.nav-bar {
+    display: flex;
     align-items: center;
-    list-style-type: none; /* This is used to remove the default list style */
     gap: 2em;
-    font-weight: bold;
 }
 
-nav li:nth-child(1) {
+.nav-brand {
     margin-right: auto;
     font-family: 'Google Sans', serif, Poppins;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.1em;
+}
+
+.nav-social {
+    display: flex;
+    list-style: none;
+    gap: 1.5em;
+    font-weight: bold;
 }
 
 nav a {
@@ -58,7 +67,76 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-    color: var(--text-color);
+}
+
+nav a.active {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* --- Hamburger button --- */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 10;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2.5px;
+    background-color: var(--text-color);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* --- Slide-down menu --- */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    background-color: var(--color-1);
+    border-radius: 0.75em;
+    margin-top: 0.75em;
+    font-weight: bold;
+}
+
+.nav-menu.open {
+    max-height: 400px;
+    padding: 0.5em 0;
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 0.65em 1.25em;
+    transition: background-color 0.2s ease;
+}
+
+.nav-menu li a:hover {
+    background-color: var(--color-3);
+    text-decoration: none;
 }
 
 header, section {
@@ -90,11 +168,13 @@ header img:hover {
 
 .text-container {
     flex: 0 1 40em;
+    color: var(--text-color);
 }
 
 .text-container p {
     margin: .75em 0 1em;
     font-size: 1.1em;
+    color: var(--text-color);
 }
 
 .cta-button {
@@ -126,4 +206,79 @@ h2 {
 section p {
     margin-top: 1em;
     font-size: 1.1em;
+}
+
+/* --- Embedded PDF --- */
+.pdf-embed {
+    width: 100%;
+    height: 100%;
+}
+
+.pdf-embed iframe {
+    width: 100%;
+    height: 600px;
+}
+
+/* --- Page hero --- */
+.page-hero {
+    text-align: center;
+    background-color: var(--color-3);
+}
+
+.page-hero h1 {
+    background-color: transparent;
+}
+
+.page-hero p {
+    max-width: 36em;
+    margin: 0.75em auto 0;
+}
+
+/* --- Project & post cards --- */
+.project-card,
+.post-card {
+    background-color: var(--color-2);
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.3em 0.75em;
+    font-size: 0.85em;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 2em;
+    margin: 0.5em 0;
+}
+
+.post-date {
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 0.25em;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2em 1em;
+    margin: 2em auto;
+    width: min(75em, 100%);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin-bottom: 1em;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
 }

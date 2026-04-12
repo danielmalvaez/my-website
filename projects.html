@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Daniel Malváez</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <a href="index.html" class="nav-brand">Home 🏠</a>
+                <ul class="nav-social">
+                    <li><a href="https://www.linkedin.com/in/daniel-malvaez/">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/malvaaez/">Instagram</a></li>
+                    <li><a href="https://github.com/danielmalvaez">GitHub</a></li>
+                </ul>
+                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="posts.html">Posts</a></li>
+                <li><a href="index.html#resume">Resume / CV</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <h1>Projects</h1>
+        <p>A collection of things I've built, researched, and experimented with.</p>
+    </section>
+
+    <section class="project-card" id="project-1">
+        <div class="flex-container">
+            <div class="text-container">
+                <h2>Project 1</h2>
+                <span class="tag">Computational Neuroscience</span>
+                <p>Description of your first project goes here. Explain what it does, the technologies used, and what you learned.</p>
+                <a href="#" class="cta-button">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-card" id="project-2">
+        <div class="flex-container">
+            <div class="text-container">
+                <h2>Project 2</h2>
+                <span class="tag">AI / Healthcare</span>
+                <p>Description of your second project goes here. Explain what it does, the technologies used, and what you learned.</p>
+                <a href="#" class="cta-button">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-card" id="project-3">
+        <div class="flex-container">
+            <div class="text-container">
+                <h2>Project 3</h2>
+                <span class="tag">Applied Science</span>
+                <p>Description of your third project goes here. Explain what it does, the technologies used, and what you learned.</p>
+                <a href="#" class="cta-button">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/daniel-malvaez/">LinkedIn</a>
+            <a href="https://www.instagram.com/malvaaez/">Instagram</a>
+            <a href="https://github.com/danielmalvaez">GitHub</a>
+        </div>
+        <p>&copy; 2026 Daniel Malváez</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        hamburger.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('open');
+            hamburger.classList.toggle('active', isOpen);
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+    </script>
+</body>
+</html>

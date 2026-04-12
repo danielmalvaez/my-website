@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts - Daniel Malváez</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <a href="index.html" class="nav-brand">Home 🏠</a>
+                <ul class="nav-social">
+                    <li><a href="https://www.linkedin.com/in/daniel-malvaez/">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/malvaaez/">Instagram</a></li>
+                    <li><a href="https://github.com/danielmalvaez">GitHub</a></li>
+                </ul>
+                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="posts.html" class="active">Posts</a></li>
+                <li><a href="index.html#resume">Resume / CV</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <h1>Posts</h1>
+        <p>Thoughts, tutorials, and things I've been learning about.</p>
+    </section>
+
+    <section class="post-card">
+        <div class="flex-container">
+            <div class="text-container">
+                <span class="post-date">April 12, 2026</span>
+                <h2>Post Title 1</h2>
+                <p>A short preview of what this post is about. Write a couple of sentences that give the reader a reason to click and read more.</p>
+                <a href="#" class="cta-button">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="post-card">
+        <div class="flex-container">
+            <div class="text-container">
+                <span class="post-date">March 28, 2026</span>
+                <h2>Post Title 2</h2>
+                <p>A short preview of what this post is about. Write a couple of sentences that give the reader a reason to click and read more.</p>
+                <a href="#" class="cta-button">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="post-card">
+        <div class="flex-container">
+            <div class="text-container">
+                <span class="post-date">March 10, 2026</span>
+                <h2>Post Title 3</h2>
+                <p>A short preview of what this post is about. Write a couple of sentences that give the reader a reason to click and read more.</p>
+                <a href="#" class="cta-button">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/daniel-malvaez/">LinkedIn</a>
+            <a href="https://www.instagram.com/malvaaez/">Instagram</a>
+            <a href="https://github.com/danielmalvaez">GitHub</a>
+        </div>
+        <p>&copy; 2026 Daniel Malváez</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        hamburger.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('open');
+            hamburger.classList.toggle('active', isOpen);
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+    </script>
+</body>
+</html>
